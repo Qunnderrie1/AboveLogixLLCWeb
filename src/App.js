@@ -6,7 +6,7 @@ import project1 from './Images/mockup-1.png'
 import project2 from './Images/mockup-2.png'
 import { useEffect, useState } from 'react';
 import BlurCircle from './Components/BlurCircle';
-import { faFacebookF, faInstagram, faInstagramSquare, faSquareYoutube, faYoutube, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram, faInstagramSquare, faSquareYoutube, faTiktok, faYoutube, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons';
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -104,7 +104,7 @@ function App() {
       <div onClick={handleNav} className=' flex justify-end  p-4 '>
         <button
           onClick={() => setOpen(!open)}
-          className=" xl:hidden flex flex-col gap-2 z-3"
+          className=" xl:hidden flex flex-col gap-2 z-10"
         >
           <motion.span
             animate={open ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
@@ -123,12 +123,12 @@ function App() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
+            initial={{ opacity: 0, x: -300, }}
+            animate={{ opacity: 1, x: 0, }}
+            transition={{ duration: 0, ease: "easeIn" }}
             className="md:hidden overflow-hidden"
           >
-            <div className="flex absolute h-full bg-black w-full z-10 md:z-10 top-0 flex-col justify-center items-center gap-5 pt-6 pb-4 px-2">
+            <div className="flex absolute xl:w-full xl;:h-full h-full w-full bg-black  z-2 top-0 flex-col justify-center items-center gap-5 pt-6 pb-4 px-2">
               {links.map((link) => (
                 <a
                   key={link}
@@ -152,7 +152,7 @@ function App() {
       {/* Hero Section */}
 
       <div id='Home' className='h-fit container pt-40 relative '>
-        <BlurCircle width={'400px'} height={'400px'} location={'right-0'} />
+        <BlurCircle width={'400px'} height={'400px'} location={'right-[50%]'} />
         <div className='flex max-xl:flex-col-reverse max-xl:justify-center container '>
           <div className=''>
             <div className='w-[660px] text-left max-xl:w-fit'>
@@ -173,7 +173,7 @@ function App() {
                   ease: "easeOut",
                 }}
 
-                className='text-white text-[60px] font-semibold max-xl:text-[50px] max-xl:text-center max-md:text-[30px]'>
+                className='text-white text-[60px] font-semibold max-xl:text-[50px] max-xl:text-center max-md:text-[30px] md:text-[34px]'>
                 Building <span className='bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-bold'>High Quailty</span>, modern websites that will grow your <span className='bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent'>Business</span>.</motion.h1>
             </div>
             <motion.p
@@ -191,9 +191,16 @@ function App() {
               <button className=' text-white w-[180px] h-[50px] rounded-md border-[1.5px] max-xl:w-[150px] max-xl:h-[40px] '>View Portfilio </button>
             </motion.div>
             <div className='pt-20 flex gap-4 max-xl:justify-center'>
-              <FontAwesomeIcon icon={faInstagram} className='border-1 rounded-full w-[14px] h-[14px] text-white p-2' />
-              <FontAwesomeIcon icon={faFacebookF} className='border-1 rounded-full w-[14px] h-[14px] text-white p-2' />
-              <FontAwesomeIcon icon={faYoutubeSquare} className='border-1 rounded-full w-[14px] h-[14px] text-white p-2' />
+              <a href='http://www.instagram.com/abovelogix' >
+                <FontAwesomeIcon icon={faInstagram} className='border-1 rounded-full w-[14px] h-[14px] text-white p-2' />
+              </a>
+              <a href='http://www.facebook.com/abovelogix' >
+                <FontAwesomeIcon icon={faFacebookF} className='border-1 rounded-full w-[14px] h-[14px] text-white p-2' />
+              </a>
+              <a href='https://www.youtube.com/@AboveLogiX' >
+                <FontAwesomeIcon icon={faYoutubeSquare} className='border-1 rounded-full w-[14px] h-[14px] text-white p-2' />
+              </a>
+
             </div>
           </div>
           <div className='max-xl:flex max-xl:justify-center'>
@@ -201,7 +208,7 @@ function App() {
               initial={{ opacity: 0, y: -20, }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              src={project1} className='max-xl:w-[200px]' ></motion.img>
+              src={project1} className='xl:w-[300px]  md:w-[350px]' ></motion.img>
           </div>
         </div>
       </div>
@@ -248,7 +255,7 @@ function App() {
         </div>
 
         {/* Section Cards */}
-        <div className='pt-20 flex gap-4 justify-center max-xl:flex-col'>
+        <div className='pt-20 flex gap-4 justify-center max-xl:flex-col md:items-center'>
           <div className='bg-primaryCardColor border-[1px] border-[#2E2E2E] rounded-md flex flex-col justify-center items-center gap-4   max-w-[400px] h-[300px] px-4 '>
             <FontAwesomeIcon icon={faLightbulb} color='white' className='w-[34px] h-[34px]' />
             <p className='text-white text-[20px] font-semibold'>Tell Us Your Vision</p>
@@ -290,7 +297,7 @@ function App() {
           <p className='text-white text-[40px] text-center font-semibold max-xl:text-[30px]'>What Makes Us Different</p>
         </div>
 
-        <div className='flex justify-center pt-20 gap-4 max-xl:flex-col '>
+        <div className='flex justify-center pt-20 gap-4 max-xl:flex-col  md:items-center '>
           <div className='bg-primaryCardColor border-[1px] border-[#2E2E2E]  rounded-md flex items-center  gap-10  max-w-[400px] h-[140px] px-8 py-4 '>
             <div className='flex flex-col justify-center gap-2'>
               <p className='text-white text-[18px] font-semibold'>Clean & Professional</p>
@@ -298,7 +305,7 @@ function App() {
             </div>
 
           </div>
-          <div className='bg-primaryCardColor border-[1px] border-[#2E2E2E] rounded-md flex items-center   gap-10   max-w-[400px] h-[140px] px-8 py-4 '>
+          <div className='bg-primaryCardColor border-[1px]  md:items-center border-[#2E2E2E] rounded-md flex items-center   gap-10   max-w-[400px] h-[140px] px-8 py-4 '>
 
             <div className='flex flex-col justify-center gap-2'>
               <p className='text-white text-[18px] font-semibold'>Trust-Focused</p>
@@ -315,7 +322,7 @@ function App() {
 
           </div>
         </div>
-        <div className='flex justify-center pt-4 gap-4 max-xl:flex-col '>
+        <div className='flex justify-center pt-4 gap-4 max-xl:flex-col  md:items-center '>
           <div className='bg-primaryCardColor border-[1px] border-[#2E2E2E] rounded-md flex items-center  gap-10  max-w-[400px] h-[140px] px-8 py-4 '>
 
             <div className='flex flex-col justify-center gap-2'>
@@ -366,7 +373,7 @@ function App() {
         </div>
 
 
-        <div className='pt-20 flex gap-4 max-xl:flex-col'>
+        <div className='pt-20 flex gap-4 max-xl:flex-col  md:items-center'>
           <div className='bg-primaryCardColor border-[1px] border-[#2E2E2E] rounded-md flex   gap-10  max-w-[700px] h-[300px] px-8 py-4 '>
             <img src={project1} className='resize img-fluid w-[200px] max-xl:w-[150px] max-xl:h-[150px]' />
             <div className='flex flex-col  gap-2 pt-3 relative'>
@@ -481,13 +488,6 @@ function App() {
 
           {/* Links Section */}
           <div>
-            <div className=''>
-              <p className='text-white font-semibold'>Business Hours</p>
-              <div className='pt-2 flex items-center gap-2'>
-                <p className='text-white text-[12px]'>Monday - Friday 8am - 4pm</p>
-              </div>
-            </div>
-
           </div>
 
 
@@ -500,7 +500,7 @@ function App() {
       {/* Footer Section */}
 
       <footer className='text-white text-[12px] text-center py-2 container'>© 2026 Above LogiX LLC</footer>
-    </div>
+    </div >
   );
 }
 
