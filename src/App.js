@@ -85,7 +85,7 @@ function App() {
     <div className="App bg-[#000121]">
 
       {/* NavBar Section */}
-      <div className='max-xl:hidden'>
+      <div className='max-xl:hidden '>
         <nav className='container p-8 flex justify-between'>
           <div>
             <a href='#' >
@@ -101,27 +101,22 @@ function App() {
         </nav>
       </div>
 
-      <div onClick={handleNav} className=' flex justify-end xl:hidden p-4  '>
-        {/* <div className='flex flex-col gap-2 w-fit h-fit '>
-          <div className='line1 transition-none animate-moveLine1 w-[40px] h-[4px] bg-white rounded-lg'></div>
-          <div className='line2 w-[30px] h-[4px] bg-white rounded-lg'></div>
-          <div className='line3 w-[40px] h-[4px] bg-white rounded-lg'></div>
-        </div> */}
+      <div onClick={handleNav} className=' flex justify-end  p-4 '>
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden flex flex-col gap-1.5 z-3"
+          className=" xl:hidden flex flex-col gap-2 z-3"
         >
           <motion.span
             animate={open ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-            className="w-10 h-0.5 bg-white rounded-full block"
+            className="w-10 h-1 bg-white rounded-full block"
           />
           <motion.span
             animate={open ? { opacity: 0 } : { opacity: 1 }}
-            className="w-7 h-0.5 bg-white rounded-full block"
+            className="w-7 h-1 bg-white rounded-full block"
           />
           <motion.span
-            animate={open ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-            className="w-10 h-0.5 bg-white rounded-full block"
+            animate={open ? { rotate: -45, y: -16 } : { rotate: 0, y: 0 }}
+            className="w-10 h-1 bg-white rounded-full block"
           />
         </button>
       </div>
@@ -133,7 +128,7 @@ function App() {
             exit={{ height: 0, opacity: 0 }}
             className="md:hidden overflow-hidden"
           >
-            <div className="flex absolute h-full bg-black w-full z-1 top-0 flex-col justify-center items-center gap-5 pt-6 pb-4 px-2">
+            <div className="flex absolute h-full bg-black w-full z-10 md:z-10 top-0 flex-col justify-center items-center gap-5 pt-6 pb-4 px-2">
               {links.map((link) => (
                 <a
                   key={link}
