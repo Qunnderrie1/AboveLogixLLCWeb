@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AboveLogixLLCWeb/static/css/main.900df1ea.css",
-    "main.js": "/AboveLogixLLCWeb/static/js/main.f0bdb3ee.js",
+    "main.css": "/AboveLogixLLCWeb/static/css/main.3a2af97d.css",
+    "main.js": "/AboveLogixLLCWeb/static/js/main.1c57398b.js",
     "static/media/mockup-2.png": "/AboveLogixLLCWeb/static/media/mockup-2.bfb0b6299235d75e09b6.png",
     "static/media/mockup-1.png": "/AboveLogixLLCWeb/static/media/mockup-1.5200c498de6765e55a81.png",
     "index.html": "/AboveLogixLLCWeb/index.html",
-    "main.900df1ea.css.map": "/AboveLogixLLCWeb/static/css/main.900df1ea.css.map",
-    "main.f0bdb3ee.js.map": "/AboveLogixLLCWeb/static/js/main.f0bdb3ee.js.map"
+    "main.3a2af97d.css.map": "/AboveLogixLLCWeb/static/css/main.3a2af97d.css.map",
+    "main.1c57398b.js.map": "/AboveLogixLLCWeb/static/js/main.1c57398b.js.map"
   },
   "entrypoints": [
-    "static/css/main.900df1ea.css",
-    "static/js/main.f0bdb3ee.js"
+    "static/css/main.3a2af97d.css",
+    "static/js/main.1c57398b.js"
   ]
 }
