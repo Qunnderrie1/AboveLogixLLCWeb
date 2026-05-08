@@ -6,6 +6,7 @@ import NavBar from "./Components/NavBar";
 import './App.css'
 import NotFound from "./Pages/NotFound";
 import Portfolio from "./Pages/Portfolio";
+import Pricing from "./Pages/Pricing";
 
 function App() {
 
@@ -14,8 +15,9 @@ function App() {
     <div className="bg-primary-dark">
       <NavBar />
       <Routes>
-        <Route path="/AboveLogixLLCWeb" element={<Home />} />
+        <Route path="/AboveLogixLLCWeb/Home" element={<Home />} />
         <Route path="AboveLogixLLCWeb/portfolio" element={<Portfolio />} />
+        <Route path="AboveLogixLLCWeb/pricing" element={<Pricing />} />
         <Route path="AboveLogixLLCWeb/FAQ" element={<FAQ />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

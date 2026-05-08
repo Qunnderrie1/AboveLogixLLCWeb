@@ -24,6 +24,8 @@ const Home = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
+    const [openProjectForm, setOpenProjectForm] = useState(false)
+
 
     //  Reference for animating section
     const ref1 = useRef(null);
@@ -63,10 +65,82 @@ const Home = () => {
         }
     }
 
+    const handleStartProjectForm = (e) => {
+        e.preventDefault();
+
+
+    }
+
+    useEffect(() => {
+
+        if (openProjectForm) {
+            document.body.style.overflow = "hidden"
+        }
+        else {
+            document.body.style.overflow = "auto"
+
+        }
+
+    }, [openProjectForm])
+
 
     return (
         <div className=" ">
 
+            {/* Open Project Form */}
+            <div className={openProjectForm ? "bg-black absolute w-full h-full top-0 z-10 bg-opacity-50" : "hidden"}>
+                <div className='flex justify-center items-center  h-full container' >
+                    <form onSubmit={handleStartProjectForm} className=' h-fit w-[700px] bg-white p-4 rounded-md relative max-sm:mt-80 '>
+                        <button onClick={() => setOpenProjectForm(false)} className='btn-close absolute right-4 top-8'></button>
+                        <p className='text-center text-[24px] font font-semibold'>Start Project Form</p>
+
+                        <div className='flex flex-col gap-4 pt-4'>
+
+                            <div className='flex flex-col gap-2'>
+                                <label htmlFor='firstname'>Client</label>
+                                <div className='flex gap-4'>
+                                    <input className='form-control' placeholder='First Name' />
+                                    <input className='form-control' placeholder='Last Name' />
+                                </div>
+                            </div>
+                            <div className='flex flex-col gap-2'>
+                                <label htmlFor='firstname'>Company</label>
+                                <div className='flex gap-4'>
+                                    <input className='form-control' placeholder='' />
+                                </div>
+                            </div>
+                            <div className='flex flex-col gap-2'>
+                                <label htmlFor='firstname'>Email Address</label>
+                                <div className='flex gap-4'>
+                                    <input className='form-control' placeholder='' />
+                                </div>
+                            </div>
+                            <div className='flex flex-col gap-2'>
+                                <label htmlFor='firstname'>Project Description and Goals</label>
+                                <div className='flex gap-4'>
+                                    <textarea className='form-control h-[150px] resize-none' placeholder='Tell us about your project' />
+                                </div>
+                            </div>
+                            <div className='flex flex-col gap-2'>
+                                <label htmlFor='firstname'>Audience</label>
+                                <div className='flex gap-4'>
+                                    <input className='form-control' placeholder='' />
+                                </div>
+                            </div>
+                            <div className='flex flex-col gap-2'>
+                                <label htmlFor='firstname'>Desired Features and Functionality</label>
+                                <div className='flex gap-4'>
+                                    <input className='form-control' placeholder='' />
+                                </div>
+                            </div>
+                            <button className='bg-primary text-white w-full py-2 rounded-md text-[18px]'>Submit</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            {/* Open Project Form */}
 
             <div className='container max-xl:hidden '>
                 <div className='bg-gradient-to-r from-primary-dark via-white to-primary-dark h-[1px]'></div>
@@ -110,8 +184,9 @@ const Home = () => {
                             transition={{ duration: 1, ease: "easeOut" }}
                             className='mt-10 flex gap-10 max-xl:justify-center'>
                             <motion.button
+                                onClick={() => setOpenProjectForm(true)}
                                 className='bg-gradient-to-r from-primary to-secondary  text-white w-[180px] h-[50px] rounded-md font-semibold max-xl:w-[150px] max-xl:h-[40px]'>Start Project </motion.button>
-                            <Link to="/portfolio">
+                            <Link to="/AboveLogixLLCWeb/portfolio">
                                 <button className=' text-white w-[180px] h-[50px] rounded-md border-[1.5px] max-xl:w-[150px] max-xl:h-[40px] '>View Portfilio </button>
                             </Link>
                         </motion.div>
@@ -375,12 +450,6 @@ const Home = () => {
                 </div>
 
                 {/* Contact Section */}
-
-
-
-
-
-
 
                 <div className='container py-40'>
                     <div className='bg-gradient-to-r from-primary-dark via-white to-primary-dark h-[1px]'></div>

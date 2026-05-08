@@ -10,7 +10,7 @@ const NavBar = () => {
 
 
     const [open, setOpen] = useState(false)
-    const links = ["Home", "About", "Projects", "Contact", "FAQ"];
+    const links = ["Home", "Portfolio", , "Pricing", "About", "FAQ"];
     useEffect(() => {
 
         if (open) {
@@ -24,23 +24,26 @@ const NavBar = () => {
     }, [open])
     return (
         <div>
+
+            {/* Desktop NavBar Container */}
             <div className='max-xl:hidden '>
                 <nav className='container p-8 flex justify-between'>
                     <div>
-                        <a href='#' >
+                        <Link to='/AboveLogixLLCWeb/Home' >
                             <img src={logo} className='w-[40px]' />
-                        </a>
+                        </Link>
                     </div>
                     <div className='flex gap-10'>
-                        <Link to="/AboveLogixLLCWeb" className='text-white hover:text-primary'>Home</Link>
-                        <Link to="AboveLogixLLCWeb/Portfolio" className='text-white hover:text-primary'>Portfolio</Link>
-                        <Link to="AboveLogixLLCWeb/Services" className='text-white hover:text-primary'>Services</Link>
-                        <Link to="AboveLogixLLCWeb/FAQ" className='text-white hover:text-primary'>FAQ</Link>
-                        <Link to="AboveLogixLLCWeb/About" className='text-white hover:text-primary'>About</Link>
+                        <Link to="/AboveLogixLLCWeb/Home" className='text-white hover:text-primary'>Home</Link>
+                        <Link to="/AboveLogixLLCWeb/Portfolio" className='text-white hover:text-primary'>Portfolio</Link>
+                        <Link to="/AboveLogixLLCWeb/Pricing" className='text-white hover:text-primary'>Pricing</Link>
+                        <Link to="/AboveLogixLLCWeb/FAQ" className='text-white hover:text-primary'>FAQ</Link>
+                        <Link to="/AboveLogixLLCWeb/About" className='text-white hover:text-primary'>About</Link>
                     </div>
                 </nav>
             </div>
 
+            {/* Mobile NavBar Container */}
             <div className=' flex justify-end  p-4 '>
                 <button
                     onClick={() => setOpen(!open)}
