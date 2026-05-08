@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AboveLogixLLCWeb/static/css/main.fd7728e5.css",
-    "main.js": "/AboveLogixLLCWeb/static/js/main.b058c6b8.js",
+    "main.css": "/AboveLogixLLCWeb/static/css/main.f6a8a9fe.css",
+    "main.js": "/AboveLogixLLCWeb/static/js/main.0e18b3f5.js",
     "static/media/mockup-2.png": "/AboveLogixLLCWeb/static/media/mockup-2.bfb0b6299235d75e09b6.png",
     "static/media/mockup-1.png": "/AboveLogixLLCWeb/static/media/mockup-1.5200c498de6765e55a81.png",
     "index.html": "/AboveLogixLLCWeb/index.html",
-    "main.fd7728e5.css.map": "/AboveLogixLLCWeb/static/css/main.fd7728e5.css.map",
-    "main.b058c6b8.js.map": "/AboveLogixLLCWeb/static/js/main.b058c6b8.js.map"
+    "main.f6a8a9fe.css.map": "/AboveLogixLLCWeb/static/css/main.f6a8a9fe.css.map",
+    "main.0e18b3f5.js.map": "/AboveLogixLLCWeb/static/js/main.0e18b3f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd7728e5.css",
-    "static/js/main.b058c6b8.js"
+    "static/css/main.f6a8a9fe.css",
+    "static/js/main.0e18b3f5.js"
   ]
 }
