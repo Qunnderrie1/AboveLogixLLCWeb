@@ -1,7 +1,7 @@
 {
   "name": "app",
   "version": "0.1.0",
-  "homepage": "http://qunnderrie1.github.io/AboveLogixLLCWeb",
+  "homepage": "http://qunnderrie1.github.io/AboveLogixLLCWeb/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -16,6 +16,7 @@
     "framer-motion": "^12.38.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "react-router": "^7.15.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
